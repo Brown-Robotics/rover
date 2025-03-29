@@ -3,6 +3,7 @@ import sys
 from roboclaw_movemotor import test_connection
 
 
+#sets config
 if __name__ == "__main__":
     
     address = int(sys.argv[1]) 

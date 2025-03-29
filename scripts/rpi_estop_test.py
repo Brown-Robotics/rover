@@ -29,6 +29,10 @@ gpio.setwarnings(False)
 #  requried reading: https://raspberrypi.stackexchange.com/a/12967
 #  basically, we choose BCM here so that we can choose the pin number based on 
 #  the GPIOXX labels on the pins in the rpi datasheet
+
+#board = referring to pins by # of pin on plug
+#bcm = referring to pins by channel # on raspberry pi
+#CHECK BCM NUMBERS
 gpio.setmode(gpio.BCM)
 gpio.setup(gpio_num, gpio.OUT)
 

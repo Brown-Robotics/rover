@@ -20,11 +20,6 @@ import time
 valid_gpio_nums = [25, 26, 5, 6]
 
 gpio.setwarnings(False)
-
-# there are two modes, BCM and BOARD
-#  requried reading: https://raspberrypi.stackexchange.com/a/12967
-#  basically, we choose BCM here so that we can choose the pin number based on 
-#  the GPIOXX labels on the pins in the rpi datasheet
 gpio.setmode(gpio.BCM)
 
 # flash each of the LEDs, in turn
