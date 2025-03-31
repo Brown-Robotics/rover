@@ -13,6 +13,7 @@ from osr_interfaces.msg import CommandCorner, Status
 RAD_TO_DEG = 180 / math.pi
 
 
+#takes commands from rover to send servos to a specified angle
 class ServoWrapper(Node):
     """Interface between the PCA9685 controlling the servos and the higher level rover code"""
     corner_motors = ['corner_right_back', 'corner_right_front', 'corner_left_front', 'corner_left_back']
@@ -31,6 +32,7 @@ class ServoWrapper(Node):
         )
 
         # PWM settings from https://www.gobilda.com/2000-series-dual-mode-servo-25-2-torque/
+        #NEED TO CHECK
         self.servo_actuation_range = 300  # [deg]
         self.centered_pulse_widths = self.get_parameter('centered_pulse_widths').get_parameter_value().integer_array_value
         assert(len(self.centered_pulse_widths) == 4)

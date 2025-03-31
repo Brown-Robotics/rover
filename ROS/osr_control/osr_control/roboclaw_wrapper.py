@@ -11,6 +11,7 @@ from osr_control.roboclaw import Roboclaw
 from sensor_msgs.msg import JointState
 from osr_interfaces.msg import CommandDrive, Status
 
+#ROS node that wraps around and abstracts roboclaw library; takes in commands and reports motor state
 
 class RoboclawWrapper(Node):
     """Interface between the roboclaw motor drivers and the higher level rover code"""

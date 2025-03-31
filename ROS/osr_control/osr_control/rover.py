@@ -12,7 +12,7 @@ from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64
 from osr_interfaces.msg import CommandDrive, CommandCorner
 
-
+#controls rover, takes in high-level commands and calculates motor commands that are sent to roboclaw wrapper
 class Rover(Node):
     """Math and motor control algorithms to move the rover"""
 

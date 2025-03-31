@@ -6,7 +6,7 @@ from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 
-
+#launch file necessary to start all ROS nodes + operating parameters for robot (ex: pulse widths, angular roll/pitch/yaw)
 def generate_launch_description():
 
     roboclaw_params = os.path.join(
