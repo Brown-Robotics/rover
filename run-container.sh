@@ -23,7 +23,7 @@ fi
 docker run -it --privileged -d \
   --env RCUTILS_COLORIZED_OUTPUT=1 \
   --volume "${CURRENT_DIR}:${ROS_WS_PATH}:rw" \
-  --volume /dev/bus/usb:/dev/bus/usb \
+  --volume /dev:/dev \
   --name "${DOCKER_REPOSITORY}" \
   --network host \
   --device /dev/dri \

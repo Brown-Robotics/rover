@@ -8,8 +8,13 @@ if [[ "$EUID" -ne 0 ]]; then
   exit 1
 fi
 
+echo "NB: raspi-config must be done manually."
+echo "See https://github.com/nasa-jpl/osr-rover-code/blob/master/setup/rpi.md#enabling-serial-and-i2c."
+
 # Put setup commands that must be run outside the container here.
 cp ./config/* /etc/udev/rules.d/
 udevadm control --reload-rules && udevadm trigger
 
-# TODO: raspi-config setup, might have to be manual.
+adduser $USER tty
+adduser $USER dialout
+adduser $USER input
