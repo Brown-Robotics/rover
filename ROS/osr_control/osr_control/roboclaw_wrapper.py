@@ -12,6 +12,11 @@ from sensor_msgs.msg import JointState
 from osr_interfaces.msg import CommandDrive, Status
 
 #ROS node that wraps around and abstracts roboclaw library; takes in commands and reports motor state
+#translates ROS messages into Roboclaw API calls and publishes motor state back to ROS
+#manages serial connection to motor controllers
+#subscribes to high-level driving commands
+#reads states from controllers (ex: encoder position, speed, battery, errors)
+#launch file (osr_launch.py) passes parameters into Rover node, which publishes drive commands to the roboclaw wrapper to perform commands
 
 class RoboclawWrapper(Node):
     """Interface between the roboclaw motor drivers and the higher level rover code"""

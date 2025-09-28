@@ -5,7 +5,7 @@ from time import sleep
 import sys
 from os import path
 # need to add the roboclaw.py file in the path
-sys.path.append(path.join(path.expanduser('~'), 'osr_ws/src/osr-rover-code/ROS/osr_control/osr_control'))
+sys.path.append('/osr_ws/src/osr-rover-code/ROS/osr_control/osr_control')
 from roboclaw import Roboclaw
 
 BAUD_RATE = 115200
